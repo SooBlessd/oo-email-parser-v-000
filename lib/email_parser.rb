@@ -42,7 +42,7 @@ class EmailParser
 
   def parse
     array = []
-    array = @emails.split(/[,\s]/)
+    array = @emails.split(/\s|\,/)
     array = array.reject { |e| e == ""}
     array.uniq
   end
